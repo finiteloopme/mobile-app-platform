@@ -16,13 +16,94 @@ These device owners could be categorised into two groups:
     - Research and even troubleshoot products and services
     - Expressing their opinions via social media
 
-While considering mobile application development across these two groups, there are three basic themes
+While considering mobile application development across these two groups, there are three basic themes:
 1. Multiple platforms: users would be using iPhones, iPads, Android phones and tablets, Windows phones and tablets
 2. Multiple applications: different applications to serve different concerns
 3. Multiple developers (collaboration)
-4. Consistent back-end services
+4. Consistent back-end services (and re-use of existing assets and services)
 
-Use-case
+## Special considerations for Mobile development
+Web  |  Mobile
+--|--
+Performant network connection  |  Lossy edge network
+No restrictions on making server requests  |  Need to make fewer requests
+Payload size is not a big concern | Payload must be small
+Deployment is well controlled | Deployment process really depends on user.  In enterprise setup (private app store), updates can be forced.  But users of public app stores may never update the application.
+
+## Common functions
+## Tools we will use
+1. [Red Hat Mobile Application Platform](https://www.redhat.com/en/technologies/mobile/application-platform) (RH-MAP)
+2. [Grunt](http://gruntjs.com/)
+3. [git](https://git-scm.com/)
+4. [node.js](https://nodejs.org/en/)
+
+## What is project in RH-MAP?
+Project in RH-MAP is a combination of one or more of the following applications.
+- Mobile client application
+- Cloud microservice application
+- MBaaS services
+
+## Further Reading
+1. [Using Cordova plugins for Client App](https://apbg-apac.redhat.feedhenry.com/docs/guides/using_cordova_plugins.html)
+2. [RH-MAP API reference](https://apbg-apac.redhat.feedhenry.com/docs/api.html)
+
+## TO-DO
+### Use-case
 - [ ] Create a MBaaS application with authentication with Google
 - [ ] Create a MBaaS application to navigate/browse Google Drive
 - [ ] Create a client and cloud application to display MD file
+
+### Getting started:
+1. Create project of type *Welcome Project* in RH-MAP studio
+
+[Working locally](https://apbg-apac.redhat.feedhenry.com/docs/dev_tools/local.html):
+1. Install the <kbd>fhc</kbd> command line utility
+
+    ``` bash
+    npm install -g fh-fhc
+    fhc target https://[your-studio-domain].feedhenry.com
+    fhc login [email address] [password]
+    # List the projects
+    fhc projects
+    ```
+
+2. Add an SSH public key to the platform
+
+    ``` bash
+    fhc keys ssh add myKey ~/.ssh/id_rsa.pub
+    ```
+
++ Clone the project repository (git) locally
+
+    ``` bash
+    # Get the project id
+    fhc projects
+    # Note the id of the project to be cloned
+    fhc projects clone vafq7bwedcbzogabeqiycxau # last part is project id
+    ls # list all the applications within the project
+    cd <application-name> # changes the directory to a specific application
+    ```
+
++ Get meta-data for applications within the main project:
+
+    ``` bash
+    fhc apps vafq7bwedcbzogabeqiycxau # last argument is the project-id
+    ```
+
++ To run cloud server locally:
+
+    ``` bash
+    cd <PROJECT-DIR>/<cloud-app> # Go to the Cloud App directory
+    npm install # Install all the dependencies for running the Cloud App
+    grunt serve
+    ```
+
++ By default the client application is configured to use backend services (cloud application & MBaaS services) on *localhost*.  To point client app to cloud services, we need the URL for cloud services.
+
+    ``` bash
+    # env argument can have following value:
+    # dev
+    # test
+    fhc app hosts --app=<cloud-app-name> --env=dev
+    # Copy the URL returned by the above command. And update the 'default_local_server_url' variable in Gruntfile.js
+    ```
