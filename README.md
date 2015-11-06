@@ -11,24 +11,27 @@ tags:
 As the adoption of mobile and smart devices keeps increasing, Enterprises have started exploring avenues to effectively engage the device owners by maximising the benefits offered by these devices.  
 
 These device owners could be categorised into two groups:
+
 1. Internal workforce: use of personal handheld devices would increase productivity by streamlining service operations and reducing manual elements like paperwork and travel.
 2. End customers are increasingly using their smartphones to:
     - Research and even troubleshoot products and services
     - Expressing their opinions via social media
 
 While considering mobile application development across these two groups, there are three basic themes:
+
 1. Multiple platforms: users would be using iPhones, iPads, Android phones and tablets, Windows phones and tablets
 2. Multiple applications: different applications to serve different concerns
 3. Multiple developers (collaboration)
 4. Consistent back-end services (and re-use of existing assets and services)
 
 ## Special considerations for Mobile development
-Web  |  Mobile
---|--
-Performant network connection  |  Lossy edge network
-No restrictions on making server requests  |  Need to make fewer requests
-Payload size is not a big concern | Payload must be small
-Deployment is well controlled | Deployment process really depends on user.  In enterprise setup (private app store), updates can be forced.  But users of public app stores may never update the application.
+
+Web                                       | Mobile
+------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Performant network connection             | Lossy edge network
+No restrictions on making server requests | Need to make fewer requests
+Payload size is not a big concern         | Payload must be small
+Deployment is well controlled             | Deployment process really depends on user.  In enterprise setup (private app store), updates can be forced.  But users of public app stores may never update the application.
 
 ## Common functions
 ## Tools we will use
