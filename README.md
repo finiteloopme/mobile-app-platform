@@ -34,8 +34,11 @@ Payload size is not a big concern         | Payload must be small
 Deployment is well controlled             | Deployment process really depends on user.  In enterprise setup (private app store), updates can be forced.  But users of public app stores may never update the application.
 
 ## Common functions
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3dfa6ba2bf0e896e26a72e2f88ce2804085c9056
 ## Tools we will use
 1. [Red Hat Mobile Application Platform](https://www.redhat.com/en/technologies/mobile/application-platform) (RH-MAP)
 2. [Grunt](http://gruntjs.com/)
@@ -48,6 +51,7 @@ Project in RH-MAP is a combination of one or more of the following applications.
 - Cloud microservice application
 - MBaaS services
 
+<<<<<<< HEAD
 
 ## Getting started:
 
@@ -55,6 +59,15 @@ Project in RH-MAP is a combination of one or more of the following applications.
 - Login to Red Hat Mobile Application Platform Dev Studio
 - Create project of type *Hello World Project* in RH-MAP studio
 - 
+=======
+## Further Reading
+1. [Using Cordova plugins for Client App](https://apbg-apac.redhat.feedhenry.com/docs/guides/using_cordova_plugins.html)
+2. [RH-MAP API reference](https://apbg-apac.redhat.feedhenry.com/docs/api.html)
+
+
+## Getting started:
+- Create project of type *Welcome Project* in RH-MAP studio
+>>>>>>> 3dfa6ba2bf0e896e26a72e2f88ce2804085c9056
 
 ### [Working locally](https://apbg-apac.redhat.feedhenry.com/docs/dev_tools/local.html):
 
@@ -109,12 +122,15 @@ Project in RH-MAP is a combination of one or more of the following applications.
     # Copy the URL returned by the above command. And update the 'default_local_server_url' variable in Gruntfile.js
     ```
 
+<<<<<<< HEAD
 ## Further Reading
 
 1. [Using Cordova plugins for Client App](https://apbg-apac.redhat.feedhenry.com/docs/guides/using_cordova_plugins.html)
 2. [RH-MAP API reference](https://apbg-apac.redhat.feedhenry.com/docs/api.html)
 
 
+=======
+>>>>>>> 3dfa6ba2bf0e896e26a72e2f88ce2804085c9056
 ## TO-DO
 
 ### Use-case
