@@ -56,8 +56,9 @@ Project in RH-MAP is a combination of one or more of the following applications.
 ### Getting started:
 1. Create project of type *Welcome Project* in RH-MAP studio
 
-[Working locally](https://apbg-apac.redhat.feedhenry.com/docs/dev_tools/local.html):
-1. Install the <kbd>fhc</kbd> command line utility
+### [Working locally](https://apbg-apac.redhat.feedhenry.com/docs/dev_tools/local.html):
+
+1. Install the <kbd>fhc</kbd> command line utility:
 
     ``` bash
     npm install -g fh-fhc
