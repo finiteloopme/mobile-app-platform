@@ -27,3 +27,4 @@ build/Release
 node_modules
 Mobile-Markdown--Markdown-client-app/.git
 Mobile-Markdown--Markdown-cloud-app/.git
+_site/

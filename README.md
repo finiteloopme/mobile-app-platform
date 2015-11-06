@@ -48,13 +48,13 @@ Project in RH-MAP is a combination of one or more of the following applications.
 - Cloud microservice application
 - MBaaS services
 
-## Further Reading
-1. [Using Cordova plugins for Client App](https://apbg-apac.redhat.feedhenry.com/docs/guides/using_cordova_plugins.html)
-2. [RH-MAP API reference](https://apbg-apac.redhat.feedhenry.com/docs/api.html)
-
 
 ## Getting started:
-- Create project of type *Welcome Project* in RH-MAP studio
+
+- Register for an account [here](https://openshift.feedhenry.com/)
+- Login to Red Hat Mobile Application Platform Dev Studio
+- Create project of type *Hello World Project* in RH-MAP studio
+- 
 
 ### [Working locally](https://apbg-apac.redhat.feedhenry.com/docs/dev_tools/local.html):
 
@@ -108,6 +108,12 @@ Project in RH-MAP is a combination of one or more of the following applications.
     fhc app hosts --app=<cloud-app-name> --env=dev
     # Copy the URL returned by the above command. And update the 'default_local_server_url' variable in Gruntfile.js
     ```
+
+## Further Reading
+
+1. [Using Cordova plugins for Client App](https://apbg-apac.redhat.feedhenry.com/docs/guides/using_cordova_plugins.html)
+2. [RH-MAP API reference](https://apbg-apac.redhat.feedhenry.com/docs/api.html)
+
 
 ## TO-DO
 
