@@ -47,14 +47,9 @@ Project in RH-MAP is a combination of one or more of the following applications.
 1. [Using Cordova plugins for Client App](https://apbg-apac.redhat.feedhenry.com/docs/guides/using_cordova_plugins.html)
 2. [RH-MAP API reference](https://apbg-apac.redhat.feedhenry.com/docs/api.html)
 
-## TO-DO
-### Use-case
-- [ ] Create a MBaaS application with authentication with Google
-- [ ] Create a MBaaS application to navigate/browse Google Drive
-- [ ] Create a client and cloud application to display MD file
 
-### Getting started:
-1. Create project of type *Welcome Project* in RH-MAP studio
+## Getting started:
+- Create project of type *Welcome Project* in RH-MAP studio
 
 ### [Working locally](https://apbg-apac.redhat.feedhenry.com/docs/dev_tools/local.html):
 
@@ -74,7 +69,7 @@ Project in RH-MAP is a combination of one or more of the following applications.
     fhc keys ssh add myKey ~/.ssh/id_rsa.pub
     ```
 
-+ Clone the project repository (git) locally
+3. Clone the project repository (git) locally
 
     ``` bash
     # Get the project id
@@ -85,13 +80,13 @@ Project in RH-MAP is a combination of one or more of the following applications.
     cd <application-name> # changes the directory to a specific application
     ```
 
-+ Get meta-data for applications within the main project:
+4. Get meta-data for applications within the main project:
 
     ``` bash
     fhc apps vafq7bwedcbzogabeqiycxau # last argument is the project-id
     ```
 
-+ To run cloud server locally:
+5. To run cloud server locally:
 
     ``` bash
     cd <PROJECT-DIR>/<cloud-app> # Go to the Cloud App directory
@@ -99,7 +94,7 @@ Project in RH-MAP is a combination of one or more of the following applications.
     grunt serve
     ```
 
-+ By default the client application is configured to use backend services (cloud application & MBaaS services) on *localhost*.  To point client app to cloud services, we need the URL for cloud services.
+6. By default the client application is configured to use backend services (cloud application & MBaaS services) on *localhost*.  To point client app to cloud services, we need the URL for cloud services.
 
     ``` bash
     # env argument can have following value:
@@ -108,3 +103,10 @@ Project in RH-MAP is a combination of one or more of the following applications.
     fhc app hosts --app=<cloud-app-name> --env=dev
     # Copy the URL returned by the above command. And update the 'default_local_server_url' variable in Gruntfile.js
     ```
+
+## TO-DO
+
+### Use-case
+    - [ ] Create a MBaaS application with authentication with Google
+    - [ ] Create a MBaaS application to navigate/browse Google Drive
+    - [ ] Create a client and cloud application to display MD file
